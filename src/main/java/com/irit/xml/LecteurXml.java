@@ -27,7 +27,10 @@ public class LecteurXml {
           boolean isNbQuestions = false;
           boolean isNbReponses = false;
           boolean isNumero = false;
-          String num = "";
+          boolean isEndQuestion = false;
+          boolean isQuestion = false;
+          Integer num ;
+          Integer nbR ;
 
           @Override
           public void startElement(String uri, String localName, String qName, Attributes attributes) {
@@ -37,6 +40,16 @@ public class LecteurXml {
                   isNbReponses = true;
               if (qName.equalsIgnoreCase("Numero"))
                   isNumero = true;
+          }
+          
+          @Override
+          public void endElement(String uri, String localName, String qName) {
+              if (qName.equalsIgnoreCase("Question")) {
+                  System.out.println("FIN QUESTION" + " " + num + " " + nbR);
+                  num++;
+                  for(int i = 0; i < nbR; i++)
+                     stockReponses.addReponse(num);
+              }
           }
 
           @Override
@@ -48,14 +61,11 @@ public class LecteurXml {
               }
               if (isNumero) {
                   isNumero = false;
-                  num = new String(ch, start, length);
+                  num = Integer.valueOf(new String(ch, start, length));
               }
               if (isNbReponses) {
                   isNbReponses = false;
-                  String nbR = new String (ch, start, length);
-
-                  for(int i = 0; i < Integer.valueOf(nbR); i++)
-                     stockReponses.addReponse(Integer.valueOf(num));
+                  nbR = Integer.valueOf(new String(ch, start, length));
               }
           }
         };

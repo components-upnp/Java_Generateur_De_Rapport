@@ -5,17 +5,15 @@
  */
 package display;
 
-import com.irit.upnp.GenerateurDeRapportServer;
 import com.irit.upnp.GenerationRapportController;
 import com.irit.xml.LecteurXml;
 import com.irit.xml.StockReponses;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
 import org.fourthline.cling.model.meta.LocalService;
+import org.jfree.ui.RefineryUtilities;
 import org.xml.sax.SAXException;
 
 /**
@@ -41,14 +39,18 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                         l = new LecteurXml((String)evt.getNewValue());
                   
                     } catch (ParserConfigurationException ex) {
-                        Logger.getLogger(FenetrePrincipale.class.getName()).log(Level.SEVERE, null, ex);
+                        ex.printStackTrace();
                     } catch (SAXException ex) {
-                        Logger.getLogger(FenetrePrincipale.class.getName()).log(Level.SEVERE, null, ex);
+                        ex.printStackTrace();
                     } catch (IOException ex) {
-                        Logger.getLogger(FenetrePrincipale.class.getName()).log(Level.SEVERE, null, ex);
+                        ex.printStackTrace();
                     }
                     StockReponses st = l.getStockReponses();
                     text.setText(st.getReponses().toString());
+                    PieChart p = new PieChart("Vote Results", l.getStockReponses());
+                    p.setSize( 560 , 367 );    
+                    RefineryUtilities.centerFrameOnScreen( p );    
+                    p.setVisible( true ); 
                 }
             }
         });

@@ -8,10 +8,13 @@ import java.util.HashMap;
 public class StockReponses {
     private HashMap<Integer, Integer> reponses;
     private int nbQuestions;
+    private int nbVotes;
 
     public StockReponses(int nb) {
         reponses = new HashMap<Integer, Integer>();
         nbQuestions = nb;
+        
+        nbVotes = 0;
 
         for (int i = 0; i < nbQuestions; i++)
             reponses.put(i,0);
@@ -19,6 +22,7 @@ public class StockReponses {
 
     public void addReponse(int num) {
         num--;
+        nbVotes++;
         int nbCourant = reponses.get(num);
         nbCourant++;
         System.out.println(num + nbCourant);
@@ -31,5 +35,9 @@ public class StockReponses {
 
     public int getNbQuestions() {
         return nbQuestions;
+    }
+    
+    public int getNbVotes() {
+        return nbVotes;
     }
 }
