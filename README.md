@@ -1,4 +1,4 @@
-# Java_Generateur_De_Rapport
+# Java_Report_Generator
 Composant UPnP qui reçoit les résultats d'un vote et en affiche le rapport
 
 <strong>Descritpion : </strong>
