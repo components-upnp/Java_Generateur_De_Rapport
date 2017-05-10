@@ -26,6 +26,7 @@ public class GenerationRapportController {
     @UpnpStateVariable(sendEvents = false)
     private String votes = "";
 
+    @UpnpAction(name = "SetVotes")
     public void setVotes(@UpnpInputArgument(name = "NewVotesValue") String v) {
         votes = v;
         propertyChangeSupport.firePropertyChange("votes", "", votes);

@@ -1,5 +1,6 @@
 package com.irit.upnp;
 
+import display.FenetrePrincipale;
 import org.fourthline.cling.UpnpService;
 import org.fourthline.cling.UpnpServiceImpl;
 import org.fourthline.cling.binding.annotations.AnnotationLocalServiceBinder;
@@ -58,7 +59,7 @@ public class GenerateurDeRapportServer implements Runnable {
                 new DefaultServiceManager(generationRapportService, GenerationRapportController.class)
         );
 
-       // new Fenetre(voteService,commandeProfesseurService,rapportService).setVisible(true);
+        new FenetrePrincipale(generationRapportService).setVisible(true);
 
         return new LocalDevice(
                 identity, type, details,
