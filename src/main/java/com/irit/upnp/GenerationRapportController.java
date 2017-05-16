@@ -8,8 +8,8 @@ import java.beans.PropertyChangeSupport;
  * Created by mkostiuk on 09/05/2017.
  */
 @UpnpService(
-        serviceType = @UpnpServiceType("GenerationReportService"),
-        serviceId = @UpnpServiceId(value = "GenerationReportService")
+        serviceType = @UpnpServiceType("ReportService"),
+        serviceId = @UpnpServiceId(value = "ReportService")
 )
 public class GenerationRapportController {
 
