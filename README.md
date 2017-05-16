@@ -11,7 +11,10 @@ Ce composant est un programme JAVA avec une interface SWING et peut être utilis
 Pour lancer l'application il suffit de lancer le .jar se situant dans le répertoire build.
 Voici un exemple d'exécution de l'application:
 
-![alt tag]()
+![alt tag](https://github.com/components-upnp/Java_Report_Generator/blob/master/Report_Generator.png)
+
+Sur cette image on peut observer un exemple de réponse à une question, pour laquelle trois réponses possibles étaient proposées
+et trois personnes ont répondu, deux pour la réponse 1 et une pour la 2.
 
 <strong>Spécification UPnP : </strong>
 
