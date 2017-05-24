@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package display;
+package com.irit.display;
 
 import com.irit.upnp.GenerationRapportController;
 import com.irit.xml.LecteurXml;

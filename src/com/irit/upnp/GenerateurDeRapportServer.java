@@ -1,6 +1,6 @@
 package com.irit.upnp;
 
-import display.FenetrePrincipale;
+import com.irit.display.FenetrePrincipale;
 import org.fourthline.cling.UpnpService;
 import org.fourthline.cling.UpnpServiceImpl;
 import org.fourthline.cling.binding.annotations.AnnotationLocalServiceBinder;
