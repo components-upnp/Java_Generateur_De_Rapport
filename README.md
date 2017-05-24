@@ -11,7 +11,7 @@ Ce composant est un programme JAVA avec une interface SWING et peut être utilis
 Pour lancer l'application il suffit de lancer le .jar se situant dans le répertoire build.
 Voici un exemple d'exécution de l'application:
 
-![alt tag](https://github.com/components-upnp/Java_Report_Generator/blob/master/Report_Generator.png)
+![alt tag](https://github.com/components-upnp/Java_Report_Generator/blob/master/CaptureGenerateurRapport.PNG)
 
 Sur cette image on peut observer un exemple de réponse à une question, pour laquelle trois réponses possibles étaient proposées
 et trois personnes ont répondu, deux pour la réponse 1 et une pour la 2.
@@ -24,7 +24,7 @@ Ce composant présente le service ReportGenerationService qui offre la méthode 
   
 Voici le schéma représentant le composant:
 
-![alt tag](https://github.com/components-upnp/Java_Generateur_De_Rapport/blob/master/Report_Generator.png)
+![alt tag](https://github.com/components-upnp/Java_Report_Generator/blob/master/ReportGenerator.png)
 
 <strong>Maintenance : </strong>
 
