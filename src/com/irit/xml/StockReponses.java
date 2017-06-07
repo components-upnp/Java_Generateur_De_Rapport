@@ -16,12 +16,11 @@ public class StockReponses {
         
         nbVotes = 0;
 
-        for (int i = 0; i < nbQuestions; i++)
+        for (int i = 0; i <= nbQuestions; i++)
             reponses.put(i,0);
     }
 
     public void addReponse(int num) {
-        num--;
         nbVotes++;
         int nbCourant = reponses.get(num);
         nbCourant++;
@@ -34,7 +33,6 @@ public class StockReponses {
     }
 
     public int getVoteReponse(int num) {
-        num--;
         return reponses.get(num);
     }
 

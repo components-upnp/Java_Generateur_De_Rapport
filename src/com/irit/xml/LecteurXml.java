@@ -46,7 +46,6 @@ public class LecteurXml {
           public void endElement(String uri, String localName, String qName) {
               if (qName.equalsIgnoreCase("Question")) {
                   System.out.println("FIN QUESTION" + " " + num + " " + nbR);
-                  num++;
                   for(int i = 0; i < nbR; i++)
                      stockReponses.addReponse(num);
               }

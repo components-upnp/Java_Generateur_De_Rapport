@@ -1,4 +1,4 @@
-package com.irit;
+package test.java.com.irit;
 
 import com.irit.xml.LecteurXml;
 import com.irit.xml.StockReponses;
@@ -23,6 +23,7 @@ public class TestLecteurXml extends TestCase {
     public void setUp() throws IOException, SAXException, ParserConfigurationException {
         l = new LecteurXml(xml);
         sr = l.getStockReponses();
+
     }
 
     @Test
@@ -32,29 +33,19 @@ public class TestLecteurXml extends TestCase {
 
     @Test
     public void testNbReponse1() {
-        assertEquals(2, sr.getVoteReponse(1));
+        assertEquals(2, sr.getVoteReponse(0));
     }
 
     @Test
     public void testNbReponse2() {
-        assertEquals(1,sr.getVoteReponse(2));
+        assertEquals(1,sr.getVoteReponse(1));
     }
 
     @Test
     public void testNbReponse3() {
-        assertEquals(0, sr.getVoteReponse(3));
+        System.out.println(sr);
+        assertEquals(0, sr.getVoteReponse(2));
     }
 
-    @Test
-    public void testReponseInvalide() {
-        boolean isPassed = false;
 
-        try {
-            sr.getVoteReponse(0);
-        } catch (NullPointerException ex) {
-            isPassed = true;
-        }
-
-        assertTrue(isPassed);
-    }
 }

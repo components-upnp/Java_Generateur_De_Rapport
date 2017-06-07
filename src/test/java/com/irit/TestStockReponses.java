@@ -1,4 +1,4 @@
-package com.irit;
+package test.java.com.irit;
 
 import com.irit.xml.StockReponses;
 import junit.framework.TestCase;
@@ -25,8 +25,8 @@ public class TestStockReponses extends TestCase {
 
     @Test
     public void testAddReponseOk() {
-        sr.addReponse(1);
-        assertEquals(1, sr.getVoteReponse(1));
+        sr.addReponse(0);
+        assertEquals(1, sr.getVoteReponse(0));
     }
 
     @Test
@@ -36,22 +36,13 @@ public class TestStockReponses extends TestCase {
 
     @Test
     public void testGetNbReponses5() {
+        sr.addReponse(0);
         sr.addReponse(1);
-        sr.addReponse(2);
+        sr.addReponse(0);
         sr.addReponse(1);
-        sr.addReponse(2);
-        sr.addReponse(1);
+        sr.addReponse(0);
         assertEquals(5, sr.getNbVotes());
     }
 
-    @Test
-    public void testAddResponse0()  {
-        boolean passed = false;
-        try {
-            sr.addReponse(0);
-        } catch (NullPointerException ex) {
-            passed = true;
-        }
-        assertTrue(passed);
-    }
+
 }
