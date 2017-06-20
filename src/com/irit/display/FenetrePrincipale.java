@@ -48,10 +48,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                     StockReponses st = l.getStockReponses();
                     text.setText(st.getReponses().toString());
                     //PieChart p = new PieChart("Vote Results", l.getStockReponses());
-                    BarChart p = new BarChart("Reponses questionnaire","Reponses questionnaire",l.getStockReponses());
-                    p.setSize( 560 , 367 );    
-                    RefineryUtilities.centerFrameOnScreen( p );    
-                    p.setVisible( true ); 
+                    if (st.getNbVotes() != 0) {
+                        BarChart p = new BarChart("Reponses questionnaire", "Reponses questionnaire", l.getStockReponses());
+                        p.setSize(560, 367);
+                        RefineryUtilities.centerFrameOnScreen(p);
+                        p.setVisible(true);
+                    }
                 }
             }
         });
