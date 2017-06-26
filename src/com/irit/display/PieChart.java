@@ -6,7 +6,9 @@
 package com.irit.display;
 
 import com.irit.xml.StockReponses;
-import javax.swing.JPanel;
+
+import javax.swing.*;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -26,6 +28,7 @@ public class PieChart extends ApplicationFrame {
         super(title);
         stockReponses = sr;
         setContentPane(createDemoPanel( ));
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
     
     private  PieDataset createDataset() {

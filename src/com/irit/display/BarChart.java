@@ -14,6 +14,8 @@ import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.ApplicationFrame;
 
+import javax.swing.*;
+
 /**
  *
  * @author mkostiuk
@@ -33,6 +35,7 @@ public class BarChart extends ApplicationFrame {
          PlotOrientation.VERTICAL,           
          true, true, false);
         setContentPane(new ChartPanel(barChart));
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
     
     public CategoryDataset createDataset() {
